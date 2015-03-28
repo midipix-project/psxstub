@@ -1,9 +1,9 @@
 all:
-	x86_64-nt64-midipix-gcc -shared -nostdlib -mout-implib -olibpsxscl.so stub.s
-	x86_64-nt64-midipix-as -o stub.o stub.s
-	x86_64-nt64-midipix-ar rc libpsxscl.a stub.o
-	x86_64-nt64-midipix-ranlib libpsxscl.a
-	
+	$(TARGET)-gcc -shared -nostdlib -mout-implib -olibpsxscl.so stub.s
+	$(TARGET)-as -o stub.o stub.s
+	$(TARGET)-ar rc libpsxscl.a stub.o
+	$(TARGET)-ranlib libpsxscl.a
+
 
 install: all
 	mkdir -p $(DESTDIR)/lib
