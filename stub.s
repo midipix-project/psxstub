@@ -4,5 +4,5 @@
 
 __psx_init:
 _so_entry_point:
-	mov $1, %rax
+	mov $1, %eax
 	ret
