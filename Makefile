@@ -7,7 +7,7 @@ all:
 
 install: all
 	mkdir -p $(DESTDIR)/lib
-	cp -t $(DESTDIR)/lib libpsxscl.so libpsxscl.lib.a libpsxscl.a
+	cp libpsxscl.so libpsxscl.lib.a libpsxscl.a $(DESTDIR)/lib
 
 
 clean:
