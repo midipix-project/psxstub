@@ -13,3 +13,12 @@ _so_entry_point:
 __so_entry_point:
 	mov $1, %eax
 	ret
+
+	.section .got$stub
+	.global __imp___psx_init
+	.global __imp____psx_init
+__imp___psx_init:
+	.quad	__psx_init
+__imp____psx_init:
+	.long	___psx_init
+
