@@ -17,8 +17,16 @@ __so_entry_point:
 	.section .got$stub
 	.global __imp___psx_init
 	.global __imp____psx_init
+
+#ifdef __NT64
 __imp___psx_init:
+__imp____psx_init:
 	.quad	__psx_init
+#endif
+
+#ifdef __NT32
+__imp___psx_init:
 __imp____psx_init:
 	.long	___psx_init
 
+#endif

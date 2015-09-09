@@ -1,6 +1,6 @@
 all:
-	$(TARGET)-gcc -shared -nostdlib -mout-implib -olibpsxscl.so stub.s
-	$(TARGET)-as -o stub.o stub.s
+	$(TARGET)-gcc -shared -nostdlib -mout-implib -olibpsxscl.so stub.S
+	$(TARGET)-gcc -c -o stub.o stub.S
 	$(TARGET)-ar rc libpsxscl.a stub.o
 	$(TARGET)-ranlib libpsxscl.a
 
